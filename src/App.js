@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const person = [
+    {
+      name: 'Lucas',
+      grade: 3
+    },
+    {
+      name: 'Camila',
+      grade: 8
+    },
+    {
+      name: 'Caio',
+      grade: 5
+    },
+    {
+      name: 'Julia',
+      grade: 9
+    }
+  ];
+
+  return(
+    <div className=''>
+      <h1>Status dos alunos</h1>
+      <ul>
+        {person.map(person => (
+          <li>{person.name} - {person.grade >= 7 ? 'Aprovado' : 'Reprovado'}</li>
+        ))}
+      </ul>
     </div>
   );
 }
