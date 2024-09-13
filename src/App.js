@@ -1,4 +1,6 @@
+// Define o componente funcional App
 function App() {
+  // Declaração de um array de objetos representando pessoas com nomes e notas
   const person = [
     {
       name: 'Lucas',
@@ -18,6 +20,7 @@ function App() {
     }
   ];
 
+// Retorna o JSX para renderizar a interface
   return(
     <div className=''>
       <h1>Status dos alunos</h1>
